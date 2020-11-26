@@ -1,0 +1,26 @@
+MT evaluation scorer began on 2020 Nov 26 at 07:59:59
+command line:  mteval-v13.pl sh -r /home/anjaly/Documents/git/vachan-data/Translation_quality_evaluation/data/references/mandeali/2jn.sgml -s /home/anjaly/Documents/git/vachan-data/Translation_quality_evaluation/data/source/hindi/2jn.sgml -t /home/anjaly/Documents/git/vachan-data/Translation_quality_evaluation/data/hypothesis/mandeali/2jn.sgml
+  Evaluation of hindi-to-mandeali translation using:
+    src set "NT" (1 docs, 13 segs)
+    ref set "NT" (1 refs)
+    tst set "NT" (1 systems)
+
+NIST score = 1.9259  BLEU score = 0.0300 for system "src1"
+
+# ------------------------------------------------------------------------
+
+Individual N-gram scoring
+        1-gram   2-gram   3-gram   4-gram   5-gram   6-gram   7-gram   8-gram   9-gram
+        ------   ------   ------   ------   ------   ------   ------   ------   ------
+ NIST:  1.7456   0.1741   0.0062   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000  "src1"
+
+ BLEU:  0.3256   0.0882   0.0222   0.0029   0.0015   0.0008   0.0004   0.0002   0.0001  "src1"
+
+# ------------------------------------------------------------------------
+Cumulative N-gram scoring
+        1-gram   2-gram   3-gram   4-gram   5-gram   6-gram   7-gram   8-gram   9-gram
+        ------   ------   ------   ------   ------   ------   ------   ------   ------
+ NIST:  1.7456   1.9197   1.9259   1.9259   1.9259   1.9259   1.9259   1.9259   1.9259  "src1"
+
+ BLEU:  0.2655   0.1382   0.0701   0.0300   0.0158   0.0092   0.0057   0.0037   0.0025  "src1"
+MT evaluation scorer ended on 2020 Nov 26 at 07:59:59

@@ -1,0 +1,26 @@
+MT evaluation scorer began on 2020 Nov 26 at 08:29:46
+command line:  mteval-v13.pl sh -r /home/anjaly/Documents/git/vachan-data/Translation_quality_evaluation/data/references/bhadrawahi/1jn.sgml -s /home/anjaly/Documents/git/vachan-data/Translation_quality_evaluation/data/source/hindi/1jn.sgml -t /home/anjaly/Documents/git/vachan-data/Translation_quality_evaluation/data/hypothesis/bhadrawahi/1jn.sgml
+  Evaluation of hindi-to-bhadrawahi translation using:
+    src set "NT" (1 docs, 105 segs)
+    ref set "NT" (1 refs)
+    tst set "NT" (1 systems)
+
+NIST score = 3.1034  BLEU score = 0.1034 for system "src1"
+
+# ------------------------------------------------------------------------
+
+Individual N-gram scoring
+        1-gram   2-gram   3-gram   4-gram   5-gram   6-gram   7-gram   8-gram   9-gram
+        ------   ------   ------   ------   ------   ------   ------   ------   ------
+ NIST:  2.4268   0.5402   0.1227   0.0133   0.0004   0.0000   0.0000   0.0000   0.0000  "src1"
+
+ BLEU:  0.3803   0.1633   0.0689   0.0268   0.0117   0.0041   0.0015   0.0008   0.0004  "src1"
+
+# ------------------------------------------------------------------------
+Cumulative N-gram scoring
+        1-gram   2-gram   3-gram   4-gram   5-gram   6-gram   7-gram   8-gram   9-gram
+        ------   ------   ------   ------   ------   ------   ------   ------   ------
+ NIST:  2.4268   2.9670   3.0897   3.1031   3.1034   3.1034   3.1034   3.1034   3.1034  "src1"
+
+ BLEU:  0.3803   0.2492   0.1623   0.1034   0.0670   0.0420   0.0262   0.0169   0.0112  "src1"
+MT evaluation scorer ended on 2020 Nov 26 at 08:29:47
