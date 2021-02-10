@@ -143,8 +143,8 @@ class PostChecker:
 						temp.append(words_diff)
 						if words_diff > 15:
 							# print("----------------------------------------------------------------------------------------")
-							edit_ratio = Levenshtein.ratio(s_line,t_line)
-							cosine_score = self.find_cosine_similarity(s_line,t_line)
+							edit_ratio = round(Levenshtein.ratio(s_line,t_line), 2)
+							cosine_score = round(self.find_cosine_similarity(s_line,t_line), 2)
 							# print("....", source_lines[index])
 							# print(">>>>", target_lines[index])
 							if cosine_score < 0.1 and edit_ratio < 0.35:
