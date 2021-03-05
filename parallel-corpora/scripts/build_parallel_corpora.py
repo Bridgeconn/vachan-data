@@ -12,7 +12,7 @@ class ParallelCorpora:
 	def __init__(self):
 		self.source_lang_path = './bible_hindi/'
 		self.min_lang_path = './bible_minority/'
-		self.corpora_path = './Corpora/'
+		self.corpora_path = ''
 
 
 	def write_to_file(self, df, df_min, book, folder, min_lang_name):
@@ -125,8 +125,8 @@ class ParallelCorpora:
 		try:
 			for folder in os.listdir(self.min_lang_path):
 				df_source = copy.deepcopy(df)
-				min_lang = folder.split('_')[1]
-				min_lang_name = folder.split('_')[0]
+				min_lang = folder.split('_')[-1]
+				min_lang_name = '_'.join(folder.split('_')[:-1])
 				# if min_lang == 'MJLNT':
 				# 	continue
 				print(".................................................................", min_lang)
@@ -162,8 +162,12 @@ class ParallelCorpora:
 		try:
 			print("\n..................... Building parallel corpora ......................\n")
 			cwd = os.getcwd() + '/'
-			if 'Corpora' not in os.listdir(cwd):
-				os.mkdir(cwd + 'Corpora')
+			parent_dir = '/'.join(cwd.split('/')[:-2])
+			if 'corpora' not in os.listdir(parent_dir):
+				os.mkdir(parent_dir + '/corpora')
+			self.corpora_path = parent_dir + '/corpora/'
+			self.source_lang_path = parent_dir + '/bible_hindi/'
+			self.min_lang_path = parent_dir + '/bible_minority/'	
 			for book in sorted(os.listdir(self.source_lang_path)):
 				print("\n......................... ",book, '..........................\n')
 				name = book.split('.csv')[0]
