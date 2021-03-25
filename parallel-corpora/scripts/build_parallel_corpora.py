@@ -127,8 +127,6 @@ class ParallelCorpora:
 				df_source = copy.deepcopy(df)
 				min_lang = folder.split('_')[-1]
 				min_lang_name = '_'.join(folder.split('_')[:-1])
-				# if min_lang == 'MJLNT':
-				# 	continue
 				print(".................................................................", min_lang)
 				if book not in os.listdir(self.corpora_path):
 					os.mkdir(self.corpora_path + book)
@@ -138,13 +136,8 @@ class ParallelCorpora:
 				df_min = pd.read_csv(min_book)
 				df_min = self.clean_column_name(df_min)
 				df_min.drop(['Book'], axis=1, inplace=True)
-				if len(df_source) != len(df_min):
-					# print('\n\n****************    Mismatch in number of verses')
-					df_s_modified, df_m_modified = self.align_verses(df_source, df_min)
-					self.write_to_file(df_s_modified, df_m_modified, book, folder, min_lang_name)
-				else:	
-					# print("min verses : ", len(df_min))
-					self.write_to_file(df, df_min, book, folder, min_lang_name)
+				df_s_modified, df_m_modified = self.align_verses(df_source, df_min)
+				self.write_to_file(df_s_modified, df_m_modified, book, folder, min_lang_name)
 		except Exception as e:
 			print(e)
 			traceback.print_exc()			
